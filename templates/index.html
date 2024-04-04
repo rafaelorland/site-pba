@@ -1,0 +1,238 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBA</title>
+
+    <!-- CONFIGURAÇÕES CSS (MEDIAS QUERY) -->
+    <link rel="stylesheet" href="{% static 'css/retrato.css' %}" media="all">
+    <link rel="stylesheet" href="{% static 'css/medias-query.css' %}">
+    <link rel="shortcut icon" href="{% static 'icons/favicon.png' %}" type="image/x-icon">
+    
+    <!-- IMPORTAÇÃO ICONE -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <nav>
+        <div class="image_logo">
+            <img src="{% static 'imagens/logo-pba.png' %}" alt="Logo Oficial do PBA" class="logo">
+        </div>
+
+        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">
+            menu
+        </span>
+
+
+        <div id="option" class="menu_option">
+            <ol>
+                <li><a href="#Pag_inicial" class="block_menu">Página Inicial</a></li>
+                <li><a href="#sobre_nos" class="block_menu">Sobre</a></li>
+                <li><a href="#aulas" class="block_menu">Aulas</a></li>
+                <li><a href="#membro" class="block_menu">Membros</a></li>
+                <li><a href="#duvidas" class="block_menu">Dúvidas</a></li>
+                <li><a href="#contato" class="block_menu">Contatos</a></li>
+                <li><a href="{% url "inscricao" %}" class="block_menu">Inscrições</a></li>
+            </ol>
+
+            <div class="redes_sociais_menu">
+                <a href=""><img src="{% static 'icons/instagram1.png' %}" alt="Icone instagram"></a>
+                <a href=""><img src="{% static 'icons/facebook1.png' %}" alt="Icone facebook"></a>
+                <a href=""><img src="{% static 'icons/tiktok1.png' %}" alt="Icone tik tok"></a>
+                <a href=""><img src="{% static 'icons/email.png' %}" alt="Icone email"></a>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <!-- IMAGEM -->
+
+        <div class="info">
+            <h3>Esporte Paraense</h3>
+            <h1>Projeto Basquete do Amanhã - PBA</h1>
+
+            <div class="button">
+                <button class="botao_1">
+                    <a href="{% url 'inscricao' %}" target="_blank">Inscrição</a>
+                </button>
+
+                <button class="botao_2">
+                    <a href="https://contacts-paulo.up.railway.app/" target="_blank">Redes Sociais</a>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="Pag_inicial">
+            <div class="image_sec1_pag_inicial">
+                <img src="{% static 'imagens/Horário dos treinos.png' %}" alt="">
+            </div>
+
+            <div class="text_pag_inicial">
+                <h3>Bem-vindos ao Projeto Basquete do Amanhã(PBA) de Belém!</h3>
+                
+                <p> PBA foi criado em 2021 com um objetivo claro: promover o basquete entre os jovens de Belém, PA, e aproximá-los desse esporte apaixonante!</p>
+            </div>
+        </section>
+
+        <section id="sobre_nos">
+            <h2>Sobre nós</h2>
+            <hr class="sb_line">
+            <p>
+                Somos uma equipe dedicada a proporcionar oportunidades transformadoras para os jovens paraenses através do basquete. Nosso projeto nasceu do desejo de não apenas ensinar fundamentos esportivos, mas também de cultivar valores como disciplina, trabalho em equipe e resiliência.
+            </p>
+
+            <p>
+                Acreditamos no poder do esporte como ferramenta de inclusão social e desenvolvimento pessoal. Por meio de treinamentos semanais, buscamos não apenas aprimorar habilidades esportivas, mas também promover o crescimento pessoal e a autoconfiança de nossos alunos.</p>
+
+                <p>Além dos treinos, oferecemos suporte acadêmico e orientação para o futuro profissional dos jovens, incentivando a excelência acadêmica e o desenvolvimento de habilidades para a vida. Nosso objetivo é não apenas formar atletas, mas também cidadãos conscientes e preparados para enfrentar os desafios do mundo atual.</p>
+
+                <!-- VÍDEO -->
+                <div class="iframe">
+                    <iframe src="https://www.youtube.com/embed/SXcJ55tMlLQ?si=I4hmTHlVOBHSw4AL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video" ></iframe>
+                </div>
+        </section>
+
+         <section id="aulas">
+            <h2>Aulas</h2>
+            <div class="text_aulas">
+                <p>
+                    Venha fazer parte dos nossos treinos abertos, onde todos são bem-vindos, não importa o nível de experiência! Se você está começando, nossa equipe exclusiva está aqui para te orientar e fazer você se apaixonar ainda mais pelo basquete. E o mais emocionante: se você se destacar, pode garantir seu lugar na equipe oficial do PBA!</p>
+                <p>
+            </div>
+
+            <div class="horario_aulas">
+                <strong>Horários do Treino:</strong> Terça e Quinta (de 20h às 22h)</p>
+            
+            <p>
+                <strong>Local:</strong>CT SESI, localizado na Av. Alm. Barroso, 2540 - Marco, Belém - PA, 66093-034.</p>
+            </div>
+
+                        <div class="carousel">
+                <div class="slide">
+                  <img src="{% static 'imagens/1.jpg' %}" alt="Slide 1">
+                </div>
+
+                <div class="slide">
+                  <img src="{% static 'imagens/2.jpg' %}" alt="Slide 2">
+                </div>
+
+                <div class="slide">
+                  <img src="{% static 'imagens/3.jpg' %}" alt="Slide 3">
+                </div>
+
+                <div class="slide">
+                    <img src="{% static 'imagens/4.jpg' %}" alt="Slide 4">
+                </div>
+
+                <div class="slide">
+                    <img src="{% static 'imagens/5.jpg' %}" alt="Slide 5">
+                </div>
+              </div>
+        </section>
+
+        <section id="membro">
+            <div>
+                <img src="{% static 'imagens/perfil-pba.png' %}" alt="" class="perfil">
+                <h3>Paulo Cordeiro</h3>
+
+                <hr class="sb_line">
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe alias eum ullam officia? Quae blanditiis eos error aut, commodi perspiciatis ut consequuntur earum doloremque nisi nam aperiam! Sequi, exercitationem quisquam?</p>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2>Contatos</h2>
+            <div class="icones_redes_sociais">
+                <a href=""><img src="{% static 'icons/instagram1.png' %}" alt="Icone instagram"></a>
+                <a href=""><img src="{% static 'icons/facebook1.png' %}" alt="Icone facebook"></a>
+                <a href=""><img src="{% static 'icons/tiktok1.png' %}" alt="Icone tik tok"></a>
+                <a href=""><img src="{% static 'icons/email.png' %}" alt="
+                    Icone email"></a>
+            </div>
+
+            <p>Canais de contato do Paulinho do Esporte e do PBA</p>
+        </section>
+
+        <section id="duvidas">
+            <h2>Dúvidas Frequêntes</h2>
+            <details>
+                <summary>Quem pode se indcrever?</summary>
+                <p>
+                    Jovens de até 22 anos que estejam matriculados na escola, faculdade, curso profissionalizante ou mesmo já trabalhando. Estão aptos para realizar as inscrições
+                </p>
+            </details>
+
+            <details>
+                <summary>Onde são realizados os treinos?</summary>
+                <p>
+                    No CT SESI, localizado na Av. Almirante Barroso, 2540 - Marco, Belém - PA, 66093-034.
+                    Onde são realizados os treinos?
+                    No CT SESI, localizado na Av. Almirante Barroso, 2540 - Marco, Belém - PA, 66093-034.</p>
+            </details>
+
+            <details>
+                <summary>Qual é o horário dos treinos do PBA?</summary>
+                <p>
+                    Os treinos ocorrem regularmente às terças e quintas, das 19h às 22h.</p>
+            </details>
+
+            <details>
+                <summary>Os treinos são gratuitos?</summary>
+                    <p>
+                        Sim, os treinos oferecidos pelo PBA são gratuitos para todos os participantes. No entanto, é importante observar que os uniformes necessários para participar dos treinos são pagos pelos próprios participantes.</p>
+            </details>
+
+            <details>
+                <summary>Como funciona o processo de inscrição?</summary>
+                <p>
+                    O processo de inscrição no PBA pode ser feito de duas maneiras: presencialmente ou online. Para inscrições presenciais, basta comparecer ao CT SESI nos horários de treino, preencher um formulário e passar por uma avaliação de desempenho. Para inscrições online, é necessário acessar o site oficial do Projeto Basquete do Amanhã - PBA, clicar no menu "Inscrições", preencher o formulário com suas informações e enviar. Após 48 horas, você receberá uma resposta via WhatsApp ou e-mail.
+                </p>
+            </details>
+        </section>
+
+
+    </main>
+
+        <footer>
+            <div class="logs">
+                <img src="{% static 'imagens/logo-pba.png' %}" alt="Logo Oficial do PBA" class="logo_footer">
+                
+                <img src="{% static 'imagens/logotipo-decola.png' %}" alt="Logo Oficial do Decola" class="logo_footer">
+            </div>
+
+            <div>
+                <h5>Canais Sociais</h5>
+                <hr>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Tik Tok</a>
+            </div>
+
+            <div>
+                <h5>Links Rápidos</h5>
+                <hr>
+                <a href="#">Inscrição</a>
+                <a href="#">Sobre o PBA</a>
+                <a href="#">Membros</a>
+            </div>
+
+            <div>
+                <h5>Decola Startup</h5>
+                <hr>
+                <a href="#">Inscrição</a>
+                <a href="#">Sobre o PBA</a>
+                <a href="#">Membros</a>
+            </div>
+        </footer>
+
+        <div id="copy_rigth">
+            <p>&copy; Decola Startup</p>
+        </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

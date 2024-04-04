@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBA - Inscrição</title>
+
+    <!-- CONFIGURAÇÕES CSS (MEDIAS QUERY) -->
+    <link rel="stylesheet" href="{% static 'css/retrato.css' %}" media="all">
+    <link rel="stylesheet" href="{% static 'css/medias-query.css' %}">
+    <link rel="shortcut icon" href="{% static 'icons/favicon.png' %}" type="image/x-icon">
+    
+    <!-- IMPORTAÇÃO ICONE -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <nav>
+        <div class="image_logo">
+            <img src="{% static 'imagens/logo-pba.png' %}" alt="Logo Oficial do PBA" class="logo">
+        </div>
+
+        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">
+            menu
+        </span>
+
+
+        <div id="option" class="menu_option">
+            <ol>
+                <li><a href="{% url 'home' %}#Pag_inicial" class="block_menu">Página Inicial</a></li>
+                <li><a href="{% url 'home' %}#sobre_nos" class="block_menu">Sobre</a></li>
+                <li><a href="{% url 'home' %}#aulas" class="block_menu">Aulas</a></li>
+                <li><a href="{% url 'home' %}#membro" class="block_menu">Membros</a></li>
+                <li><a href="{% url 'home' %}#duvidas" class="block_menu">Dúvidas</a></li>
+                <li><a href="{% url 'home' %}#contato" class="block_menu">Contatos</a></li>
+                <li><a href="{% url 'inscricao' %}" class="block_menu">Inscrições</a></li>
+            </ol>
+
+            <div class="redes_sociais_menu">
+                <a href=""><img src="{% static 'icons/instagram1.png' %}" alt="Icone instagram"></a>
+                <a href=""><img src="{% static 'icons/facebook1.png' %}" alt="Icone facebook"></a>
+                <a href=""><img src="{% static 'icons/tiktok1.png' %}" alt="Icone tik tok"></a>
+                <a href=""><img src="{% static 'icons/email.png' %}" alt="Icone email"></a>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <!-- IMAGEM -->
+
+        <div class="info">
+            <h2>Inscrição para participar do PBA</h2>
+            <h3>Esporte Paraense</h3>
+            <h1>Projeto Basquete do Amanhã - PBA</h1>
+
+            <div class="button">
+                <button class="botao_1">
+                    <a href="#inscricoes">Fazer inscrição</a>
+                </button>
+            </div>
+        </div>
+    </header>
+    <section id="inscricoes">
+        <h2>Inscrições</h2>
+        <div class="inscricoes_form">
+            <form method="post" id="meuFormulario">
+
+                <div class="block_form">
+                    <label for="nome">Nome do Atleta</label>
+                    
+                    <input type="text" name="nome" id="nome" required placeholder="Digite seu nome completo" minlength="3" maxlength="50" autocomplete="name">
+                </div>
+
+                <div class="block_form">
+                    <label for="bday-year">Idade do Atleta</label>
+                    
+                    <input type="number" name="idade" id="idade" required placeholder="12" min="12" max="22" autocomplete="bday-year">
+                </div>
+
+                <div class="block_form">
+                    <label for="email">Email Ativo</label>
+
+                    <input type="email" name="email" id="email" required placeholder="exemplo@exemplo.com">
+                </div>
+
+                <div class="block_form">
+                    <label for="telefone">Telefone para Contato</label>
+                    
+                    <input type="tel" name="telefone" id="telefone" pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" placeholder="00 00000-0000">
+                </div>
+
+                <div class="block_form">
+                    <label for="experiencia">Nível de Experiência</label>
+
+                    <select name="experiencia" id="experiencia">
+                        <option value=""></option>
+                        <option value="pouca">Pouca</option>
+                        <option value="media">Média</option>
+                        <option value="alta">Alta</option>
+                        <option value="nemhuma">Nenhuma</option>
+                    </select>
+                </div>
+
+                <div class="block_form">
+                    <label for="medico">Você enfrenta alguma restrição de acessibilidade ou tem alguma deficiência que devemos levar em consideração?</label>
+                    <div>
+                        <input type="radio" id="sim" name="opcao" value="sim" class="radio">
+                        <label for="sim">Sim</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="nao" name="opcao" value="nao" class="radio">
+                        <label for="nao">Não</label>
+                    </div>
+
+                    <div>
+                        <label for="mensagem">Se sim, qual?</label> <br>
+                        <textarea id="mensagem" name="mensagem" rows="4" cols="50"></textarea>
+                    </div>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="ciencia" name="ciencia" value="sim" required>
+                    <label for="ciencia">Estou ciente que estou compartilhando meu dados</label><br>
+                </div>
+
+                <div class="block_form">
+                    <input type="submit" value="Finalizar Inscrição" class="submissao">
+                </div>
+            </form>
+        </div>
+    </section> 
+</body>
+<script src="{% static 'js/script.js' %}"></script>
+</html>

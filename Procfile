@@ -1,0 +1,1 @@
+web: gunicorn pba.wsgi --log-file -
